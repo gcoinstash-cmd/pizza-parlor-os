@@ -1252,7 +1252,7 @@ export default function App() {
                     <span className="text-stone-500">
                       Agency Service Mode: <strong className="text-amber-800 uppercase italic">{WEB_AGENCY_FORM_CONFIG.reservation.integrationType}</strong>
                     </span>
-                    <span className="text-[10px] text-stone-400">
+                    <span className="text-xs font-semibold tracking-wider text-stone-400">
                       Edit/plugin via src/formConfig.ts
                     </span>
                   </div>
@@ -1299,7 +1299,7 @@ export default function App() {
                             required
                           />
                           {bookingErrors.name && bookingTouched.name && (
-                            <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                            <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                               {bookingErrors.name}
                             </span>
                           )}
@@ -1320,7 +1320,7 @@ export default function App() {
                             required
                           />
                           {bookingErrors.email && bookingTouched.email && (
-                            <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                            <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                               {bookingErrors.email}
                             </span>
                           )}
@@ -1387,13 +1387,13 @@ export default function App() {
                                   }`}
                                   onClick={() => handleBookingChange('date', formattedRef)}
                                 >
-                                  <span className="text-[10px] uppercase font-bold tracking-wider opacity-85">
+                                  <span className="text-xs font-semibold tracking-wider uppercase font-bold tracking-wider opacity-85">
                                     {weekdays[d.getDay()]}
                                   </span>
                                   <span className="text-base font-extrabold leading-none my-1">
                                     {d.getDate()}
                                   </span>
-                                  <span className="text-[10px]">
+                                  <span className="text-xs font-semibold tracking-wider">
                                     {months[d.getMonth()]}
                                   </span>
                                 </button>
@@ -1405,11 +1405,11 @@ export default function App() {
 
                         {/* Traditional backup HTML datepicker for picker flexibility */}
                         <div className="flex items-center gap-2 max-w-sm mt-1 bg-stone-50 border border-stone-200 rounded p-1.5">
-                          <span className="text-[10px] text-stone-500 uppercase font-bold pl-2">Or custom:</span>
+                          <span className="text-xs font-semibold tracking-wider text-stone-500 uppercase font-bold pl-2">Or custom:</span>
                           <input 
                             type="date" 
                             id="booking-date"
-                            className="bg-transparent text-xs text-stone-800 outline-none w-full border-none focus:ring-0 cursor-pointer"
+                            className="bg-transparent text-base min-h-[44px] text-stone-800 outline-none w-full border-none focus:ring-0 cursor-pointer"
                             value={bookingDate}
                             onChange={(e) => handleBookingChange('date', e.target.value)}
                             onBlur={() => handleBookingBlur('date')}
@@ -1417,7 +1417,7 @@ export default function App() {
                           />
                         </div>
                         {bookingErrors.date && bookingTouched.date && (
-                          <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                          <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                             {bookingErrors.date}
                           </span>
                         )}
@@ -1516,7 +1516,7 @@ export default function App() {
                             onClick={() => setBookingZone('wood-oven')}
                           >
                             <span className="reservation-zones__title block font-serif text-xs font-bold text-stone-800">Wood Oven Hearth Counter</span>
-                            <span className="reservation-zones__desc block text-[10px] text-stone-500">Intimate dynamic sights of crackling open stoves</span>
+                            <span className="reservation-zones__desc block text-xs font-semibold tracking-wider text-stone-500">Intimate dynamic sights of crackling open stoves</span>
                           </div>
                           <div 
                             id="zone-garden"
@@ -1524,7 +1524,7 @@ export default function App() {
                             onClick={() => setBookingZone('garden-patio')}
                           >
                             <span className="reservation-zones__title block font-serif text-xs font-bold text-stone-800">Giardino Patio</span>
-                            <span className="reservation-zones__desc block text-[10px] text-stone-500">Charming sweet Tuscan lights &amp; lemon trees</span>
+                            <span className="reservation-zones__desc block text-xs font-semibold tracking-wider text-stone-500">Charming sweet Tuscan lights &amp; lemon trees</span>
                           </div>
                           <div 
                             id="zone-lounge"
@@ -1532,17 +1532,17 @@ export default function App() {
                             onClick={() => setBookingZone('sommelier-lounge')}
                           >
                             <span className="reservation-zones__title block font-serif text-xs font-bold text-stone-800">Sommelier Vineria</span>
-                            <span className="reservation-zones__desc block text-[10px] text-stone-500">Muted library racks with vintage wine parings</span>
+                            <span className="reservation-zones__desc block text-xs font-semibold tracking-wider text-stone-500">Muted library racks with vintage wine parings</span>
                           </div>
                         </div>
                       </div>
 
                       {/* Notes text area */}
                       <div className="reservation-form__group reservation-form__group--full-width">
-                        <label className="reservation-form__label text-xs" htmlFor="booking-notes">Special Culinary Requests</label>
+                        <label className="reservation-form__label text-sm font-semibold" htmlFor="booking-notes">Special Culinary Requests</label>
                         <textarea 
                           id="booking-notes"
-                          className="reservation-form__textarea text-xs h-20"
+                          className="reservation-form__textarea text-base min-h-[44px] h-20"
                           placeholder="E.g., Highchair requested for toddlers, gluten allergy preps needed, sweet sparkling anniversary wine pre-pour..."
                           value={bookingNotes}
                           onChange={(e) => setBookingNotes(e.target.value)}
@@ -1664,7 +1664,7 @@ export default function App() {
                           <span className="pizzeria-cart__item-italian">{item.italianName}</span>
                           
                           {item.customizations && item.customizations.length > 0 && (
-                            <div className="pizzeria-cart__item-customizations text-[11px] text-amber-800 font-mono italic mt-1 leading-normal">
+                            <div className="pizzeria-cart__item-customizations text-xs font-semibold text-amber-800 font-mono italic mt-1 leading-normal">
                               {item.customizations.map((cust, i) => (
                                 <div key={i} className="flex items-center gap-1">
                                   <span className="text-amber-600">•</span>
@@ -1713,7 +1713,7 @@ export default function App() {
                     <div className="space-y-3">
                       {/* Name input */}
                       <div>
-                        <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-name">
+                        <label className="block text-sm font-semibold tracking-wider font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-name">
                           Full Name
                         </label>
                         <input
@@ -1730,7 +1730,7 @@ export default function App() {
                           onBlur={() => handleCheckoutBlur('name')}
                         />
                         {checkoutErrors.name && checkoutTouched.name && (
-                          <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                          <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                             {checkoutErrors.name}
                           </span>
                         )}
@@ -1738,7 +1738,7 @@ export default function App() {
 
                       {/* Phone input */}
                       <div>
-                        <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-phone">
+                        <label className="block text-sm font-semibold tracking-wider font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-phone">
                           Phone Coordinator
                         </label>
                         <input
@@ -1755,7 +1755,7 @@ export default function App() {
                           onBlur={() => handleCheckoutBlur('phone')}
                         />
                         {checkoutErrors.phone && checkoutTouched.phone && (
-                          <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                          <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                             {checkoutErrors.phone}
                           </span>
                         )}
@@ -1763,7 +1763,7 @@ export default function App() {
 
                       {/* Email input */}
                       <div>
-                        <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-email">
+                        <label className="block text-sm font-semibold tracking-wider font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-email">
                           Email Receipt Coordinates
                         </label>
                         <input
@@ -1780,7 +1780,7 @@ export default function App() {
                           onBlur={() => handleCheckoutBlur('email')}
                         />
                         {checkoutErrors.email && checkoutTouched.email && (
-                          <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                          <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                             {checkoutErrors.email}
                           </span>
                         )}
@@ -1788,7 +1788,7 @@ export default function App() {
 
                       {/* Address input */}
                       <div>
-                        <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-address">
+                        <label className="block text-sm font-semibold tracking-wider font-bold text-stone-600 uppercase tracking-wide mb-1" htmlFor="checkout-address">
                           Vespa Delivery Address
                         </label>
                         <textarea
@@ -1804,7 +1804,7 @@ export default function App() {
                           onBlur={() => handleCheckoutBlur('address')}
                         />
                         {checkoutErrors.address && checkoutTouched.address && (
-                          <span className="block text-[10px] text-red-600 font-semibold mt-1">
+                          <span className="block text-xs font-semibold tracking-wider text-red-600 font-semibold mt-1">
                             {checkoutErrors.address}
                           </span>
                         )}

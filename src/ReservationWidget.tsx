@@ -245,7 +245,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
               mode.
             </span>
           </div>
-          <span className="text-[10px] font-mono text-stone-400 hidden sm:inline">
+          <span className="text-xs font-semibold tracking-wider font-mono text-stone-400 hidden sm:inline">
             formConfig.ts integration
           </span>
         </div>
@@ -291,7 +291,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                   <h4 className="font-serif text-xl tracking-tight text-stone-900 block font-bold">
                     Pizzeria Bella Nera
                   </h4>
-                  <span className="text-[10px] font-mono tracking-widest text-[#C29E57] uppercase block mt-1">
+                  <span className="text-xs font-semibold tracking-wider font-mono tracking-widest text-[#C29E57] uppercase block mt-1">
                     Milano Est. 1984 — Booking Voucher
                   </span>
                 </div>
@@ -353,7 +353,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                       <span className="block text-[9px] font-mono text-stone-400 uppercase tracking-widest mb-1">
                         Accommodations noted
                       </span>
-                      <p className="text-stone-600 font-sans italic text-[11px] leading-relaxed">
+                      <p className="text-stone-600 font-sans italic text-xs font-semibold leading-relaxed">
                         "{bookingConfirmed.notes}"
                       </p>
                     </div>
@@ -368,7 +368,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                 <div className="text-center">
                   <button 
                     onClick={handleResetWidget}
-                    className="text-xs text-stone-400 hover:text-stone-800 underline font-mono tracking-wide transition-all"
+                    className="text-base font-semibold min-h-[44px] text-stone-400 hover:text-stone-800 underline font-mono tracking-wide transition-all"
                   >
                     Adjust Schedule / Book Another Table
                   </button>
@@ -395,7 +395,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                   
                   {/* Party Capacity Count */}
                   <div>
-                    <label className="block text-xs font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                    <label className="block text-sm font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
                       <Users size={14} className="text-[#C29E57]" />
                       <span>1. Guest Party Capacity</span>
                     </label>
@@ -423,7 +423,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
 
                   {/* Sunset Date Selection Cards */}
                   <div>
-                    <label className="block text-xs font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                    <label className="block text-sm font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
                       <CalendarIcon size={14} className="text-[#C29E57]" />
                       <span>2. Selection Sunset Date</span>
                     </label>
@@ -452,10 +452,10 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
 
                     {/* Standalone Fallback standard Date Element picker */}
                     <div className="flex items-center gap-2 max-w-xs bg-stone-50 border border-stone-200 rounded px-2 py-1.5">
-                      <span className="text-[10px] text-stone-400 uppercase tracking-wider font-mono font-bold">Custom:</span>
+                      <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-wider font-mono font-bold">Custom:</span>
                       <input 
                         type="date"
-                        className="bg-transparent text-xs text-stone-700 outline-none w-full border-none focus:ring-0 cursor-pointer"
+                        className="bg-transparent text-base min-h-[44px] text-stone-700 outline-none w-full border-none focus:ring-0 cursor-pointer"
                         value={date}
                         onChange={(e) => handleFieldChange('date', e.target.value)}
                         onBlur={() => handleFieldBlur('date', date)}
@@ -470,7 +470,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
 
                   {/* Service Dinner Hour Chips */}
                   <div>
-                    <label className="block text-xs font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                    <label className="block text-sm font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
                       <Clock size={14} className="text-[#C29E57]" />
                       <span>3. Sunset Dining Hour Slots</span>
                     </label>
@@ -557,7 +557,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                   
                   {/* Choose Seating Zone */}
                   <div>
-                    <label className="block text-xs font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-2">
+                    <label className="block text-sm font-mono font-bold text-stone-400 uppercase tracking-wider mb-2.5 flex items-center gap-2">
                       <Award size={14} className="text-[#C29E57]" />
                       <span>4. Select Ambience Aura</span>
                     </label>
@@ -600,7 +600,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                                 <span className="block font-serif text-xs font-bold text-stone-850">
                                   {item.title}
                                 </span>
-                                <span className="block text-[10px] text-stone-400 mt-0.5">
+                                <span className="block text-xs font-semibold tracking-wider text-stone-400 mt-0.5">
                                   {item.desc}
                                 </span>
                               </div>
@@ -637,7 +637,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                         />
                       </div>
                       {errors.name && touched.name && (
-                        <span className="block text-[10px] text-red-500 font-medium mt-1 pl-1">
+                        <span className="block text-xs font-semibold tracking-wider text-red-500 font-medium mt-1 pl-1">
                           {errors.name}
                         </span>
                       )}
@@ -663,7 +663,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                         />
                       </div>
                       {errors.email && touched.email && (
-                        <span className="block text-[10px] text-red-500 font-medium mt-1 pl-1">
+                        <span className="block text-xs font-semibold tracking-wider text-red-500 font-medium mt-1 pl-1">
                           {errors.email}
                         </span>
                       )}
@@ -689,7 +689,7 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
                         />
                       </div>
                       {errors.phone && touched.phone && (
-                        <span className="block text-[10px] text-red-500 font-medium mt-1 pl-1">
+                        <span className="block text-xs font-semibold tracking-wider text-red-500 font-medium mt-1 pl-1">
                           {errors.phone}
                         </span>
                       )}
@@ -703,13 +703,13 @@ export function ReservationWidget({ onReservationSuccess }: ReservationWidgetPro
 
               {/* Special Accommodations notes */}
               <div className="border-t border-stone-100 pt-4">
-                <label className="block text-xs font-mono font-bold text-stone-400 uppercase tracking-wider mb-2 flex items-center gap-1.5" htmlFor="widget-notes">
+                <label className="block text-sm font-mono font-bold text-stone-400 uppercase tracking-wider mb-2 flex items-center gap-1.5" htmlFor="widget-notes">
                   <MessageSquare size={14} className="text-[#C29E57]" />
                   <span>5. Special Accommodations (Optional)</span>
                 </label>
                 <textarea
                   id="widget-notes"
-                  className="w-full text-xs p-3 rounded border border-stone-200 focus:border-[#3C4A3E] focus:outline-none bg-stone-50/40 focus:bg-white transition-all h-20 placeholder:text-stone-450"
+                  className="w-full text-base min-h-[44px] p-3 rounded border border-stone-200 focus:border-[#3C4A3E] focus:outline-none bg-stone-50/40 focus:bg-white transition-all h-20 placeholder:text-stone-450"
                   placeholder="E.g., Highchair requested for kids, serious peanut or dairy allergies, sweet anniversary sparkling wine pre-pour..."
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}

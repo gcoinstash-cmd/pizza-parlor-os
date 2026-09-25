@@ -74,7 +74,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-serif text-lg tracking-wide font-bold text-amber-100">PIZZERIA BELLA NERA — FORNO DISPATCH OS</h3>
-                <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
+                <span className="text-xs font-semibold tracking-wider uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
                   Live Oven Telemetry
                 </span>
               </div>
@@ -117,14 +117,14 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               <div className="flex flex-col gap-2">
                 <button
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-amber-600 to-red-600 hover:from-amber-500 hover:to-red-500 text-white font-bold rounded-xl shadow-lg transition-all text-xs tracking-widest uppercase"
+                  className="w-full py-3 bg-gradient-to-r from-amber-600 to-red-600 hover:from-amber-500 hover:to-red-500 text-white font-bold rounded-xl shadow-lg transition-all text-base font-semibold min-h-[44px] tracking-widest uppercase"
                 >
                   Verify Access
                 </button>
                 <button
                   type="button"
                   onClick={handleOneClickFill}
-                  className="w-full py-2.5 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-bold rounded-xl transition-all text-xs tracking-wider flex items-center justify-center gap-2"
+                  className="w-full py-2.5 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-bold rounded-xl transition-all text-base font-semibold min-h-[44px] tracking-wider flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-4 h-4 text-amber-400" />
                   Auto-Fill 1-Click Passkey (pizza2026)
@@ -161,7 +161,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                 })}
               </div>
               <div className="flex items-center gap-4">
-                <span className="text-[11px] text-stone-400 font-mono flex items-center gap-1.5">
+                <span className="text-xs font-semibold text-stone-400 font-mono flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   OVENS FIRING: 2/2
                 </span>
@@ -180,24 +180,24 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               {/* Financial Metric Strip */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Evening Sales</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Evening Sales</span>
                   <span className="text-xl font-bold font-mono text-stone-100">€4,890.00</span>
-                  <span className="text-[10px] text-emerald-400 block mt-1">+14% vs Last Friday</span>
+                  <span className="text-xs font-semibold tracking-wider text-emerald-400 block mt-1">+14% vs Last Friday</span>
                 </div>
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Pizzas Baked Today</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Pizzas Baked Today</span>
                   <span className="text-xl font-bold font-mono text-stone-100">312 Pies</span>
-                  <span className="text-[10px] text-amber-400 block mt-1">Avg 88s Bake Time</span>
+                  <span className="text-xs font-semibold tracking-wider text-amber-400 block mt-1">Avg 88s Bake Time</span>
                 </div>
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">48hr Dough Stock</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">48hr Dough Stock</span>
                   <span className="text-xl font-bold font-mono text-stone-100">140 Doughballs</span>
-                  <span className="text-[10px] text-emerald-400 block mt-1">Optimal Proof</span>
+                  <span className="text-xs font-semibold tracking-wider text-emerald-400 block mt-1">Optimal Proof</span>
                 </div>
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Table Seating</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Table Seating</span>
                   <span className="text-xl font-bold font-mono text-stone-100">96%</span>
-                  <span className="text-[10px] text-amber-400 block mt-1">Full Service Floor</span>
+                  <span className="text-xs font-semibold tracking-wider text-amber-400 block mt-1">Full Service Floor</span>
                 </div>
               </div>
 
@@ -213,18 +213,18 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                       <div key={ov.id} className="p-5 bg-stone-900/70 border border-stone-800 rounded-xl space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-amber-400">{ov.id}</span>
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          <span className="text-xs font-semibold tracking-wider font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                             {ov.status}
                           </span>
                         </div>
                         <div className="font-serif font-bold text-base text-stone-100">{ov.name}</div>
                         <div className="pt-2 border-t border-stone-800 flex items-center justify-between">
                           <div>
-                            <span className="text-[10px] text-stone-500 block">Deck Temperature</span>
+                            <span className="text-xs font-semibold tracking-wider text-stone-500 block">Deck Temperature</span>
                             <span className="text-2xl font-mono font-bold text-amber-300">{ov.temp}</span>
                           </div>
                           <div className="text-right">
-                            <span className="text-[10px] text-stone-500 block">Fuel & Stone</span>
+                            <span className="text-xs font-semibold tracking-wider text-stone-500 block">Fuel & Stone</span>
                             <span className="text-xs font-mono text-stone-300">{ov.fuel} • {ov.deck}</span>
                           </div>
                         </div>
@@ -248,13 +248,13 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                           <div className="flex items-center gap-3">
                             <span className="font-mono font-bold text-xs text-amber-400">{tkt.id}</span>
                             <span className="text-xs font-bold text-stone-200">{tkt.table} — {tkt.guest}</span>
-                            <span className="text-[10px] text-stone-500 font-mono">({tkt.time})</span>
+                            <span className="text-xs font-semibold tracking-wider text-stone-500 font-mono">({tkt.time})</span>
                           </div>
                           <div className="text-xs text-stone-400">{tkt.items}</div>
                         </div>
                         <div className="flex items-center gap-4">
                           <span className="font-mono text-xs font-bold text-stone-100">{tkt.total}</span>
-                          <span className="text-[10px] font-bold px-2 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                          <span className="text-xs font-semibold tracking-wider font-bold px-2 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
                             {tkt.status}
                           </span>
                         </div>
@@ -273,7 +273,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                   </h4>
                   <div className="border border-stone-800 rounded-xl overflow-hidden">
                     <table className="w-full text-left text-xs text-stone-300">
-                      <thead className="bg-stone-900/80 text-[10px] uppercase font-bold text-stone-400 tracking-wider">
+                      <thead className="bg-stone-900/80 text-xs font-semibold tracking-wider uppercase font-bold text-stone-400 tracking-wider">
                         <tr>
                           <th className="py-3 px-4">Ref</th>
                           <th className="py-3 px-4">Guest</th>
@@ -292,7 +292,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                             <td className="py-3 px-4 text-stone-400">{res.party} guests • {res.zone}</td>
                             <td className="py-3 px-4 text-emerald-400">{res.deposit}</td>
                             <td className="py-3 px-4">
-                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px]">
+                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold tracking-wider">
                                 {res.status}
                               </span>
                             </td>
@@ -310,7 +310,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               <span className="font-mono">Turnkey Supabase Schema Ready • RLS Active</span>
               <button
                 onClick={onClose}
-                className="px-4 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-lg transition-colors text-xs"
+                className="px-4 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-lg transition-colors text-base font-semibold min-h-[44px]"
               >
                 Close Terminal
               </button>
